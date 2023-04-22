@@ -1,0 +1,296 @@
+Folder PATH listing for volume Windows
+Volume serial number is DC00-063C
+C:.
+³   db.sqlite3
+³   manage.py
+³   tree.txt
+³   __init__.py
+³   
+ÃÄÄÄcart
+³   ³   admin.py
+³   ³   apps.py
+³   ³   models.py
+³   ³   tests.py
+³   ³   urls.py
+³   ³   views.py
+³   ³   __init__.py
+³   ³   
+³   ÃÄÄÄmigrations
+³   ³   ³   0001_initial.py
+³   ³   ³   0002_cart.py
+³   ³   ³   0003_order_orderitem_delete_cart.py
+³   ³   ³   0004_alter_orderitem_order.py
+³   ³   ³   __init__.py
+³   ³   ³   
+³   ³   ÀÄÄÄ__pycache__
+³   ³           0001_initial.cpython-39.pyc
+³   ³           0002_cart.cpython-39.pyc
+³   ³           0003_order_orderitem_delete_cart.cpython-39.pyc
+³   ³           0004_alter_orderitem_order.cpython-39.pyc
+³   ³           __init__.cpython-39.pyc
+³   ³           
+³   ÃÄÄÄtemplates
+³   ³       cart.html
+³   ³       cartbase.html
+³   ³       
+³   ÃÄÄÄtemplatetags
+³   ³   ³   cart_tags.py
+³   ³   ³   custom_filters.py
+³   ³   ³   __init__.py
+³   ³   ³   
+³   ³   ÀÄÄÄ__pycache__
+³   ³           cart_tags.cpython-39.pyc
+³   ³           custom_filters.cpython-39.pyc
+³   ³           __init__.cpython-39.pyc
+³   ³           
+³   ÀÄÄÄ__pycache__
+³           admin.cpython-39.pyc
+³           apps.cpython-39.pyc
+³           models.cpython-39.pyc
+³           urls.cpython-39.pyc
+³           views.cpython-39.pyc
+³           __init__.cpython-39.pyc
+³           
+ÃÄÄÄcontact
+³   ³   admin.py
+³   ³   apps.py
+³   ³   models.py
+³   ³   tests.py
+³   ³   views.py
+³   ³   __init__.py
+³   ³   
+³   ÃÄÄÄmigrations
+³   ³   ³   __init__.py
+³   ³   ³   
+³   ³   ÀÄÄÄ__pycache__
+³   ³           __init__.cpython-39.pyc
+³   ³           
+³   ÃÄÄÄtemplates
+³   ³       contact.html
+³   ³       
+³   ÀÄÄÄ__pycache__
+³           admin.cpython-39.pyc
+³           apps.cpython-39.pyc
+³           models.cpython-39.pyc
+³           views.cpython-39.pyc
+³           __init__.cpython-39.pyc
+³           
+ÃÄÄÄmichaelsmicros
+³   ³   asgi.py
+³   ³   settings.py
+³   ³   urls.py
+³   ³   wsgi.py
+³   ³   __init__.py
+³   ³   
+³   ÀÄÄÄ__pycache__
+³           settings.cpython-39.pyc
+³           urls.cpython-39.pyc
+³           wsgi.cpython-39.pyc
+³           __init__.cpython-39.pyc
+³           
+ÃÄÄÄshop
+³   ³   admin.py
+³   ³   apps.py
+³   ³   item_list.html
+³   ³   models.py
+³   ³   tests.py
+³   ³   urls.py
+³   ³   views.py
+³   ³   __init__.py
+³   ³   
+³   ÃÄÄÄmigrations
+³   ³   ³   0001_initial.py
+³   ³   ³   0002_item_orderitem_order.py
+³   ³   ³   0003_rename_plant_product.py
+³   ³   ³   0004_remove_orderitem_item_delete_order_delete_orderitem.py
+³   ³   ³   __init__.py
+³   ³   ³   
+³   ³   ÀÄÄÄ__pycache__
+³   ³           0001_initial.cpython-39.pyc
+³   ³           0002_item_orderitem_order.cpython-39.pyc
+³   ³           0003_rename_plant_product.cpython-39.pyc
+³   ³           0004_remove_orderitem_item_delete_order_delete_orderitem.cpython-39.pyc
+³   ³           __init__.cpython-39.pyc
+³   ³           
+³   ÃÄÄÄtemplates
+³   ³       base.html
+³   ³       home.html
+³   ³       shop.html
+³   ³       
+³   ÀÄÄÄ__pycache__
+³           admin.cpython-39.pyc
+³           apps.cpython-39.pyc
+³           models.cpython-39.pyc
+³           views.cpython-39.pyc
+³           __init__.cpython-39.pyc
+³           
+ÃÄÄÄstatic
+³   ÀÄÄÄimg
+³           background.png
+³           boarder.png
+³           cart.png
+³           Logo.png
+³           microgreens-about.png
+³           microgreens-hero.png
+³           
+ÀÄÄÄstaticfiles
+    ÃÄÄÄadmin
+    ³   ÃÄÄÄcss
+    ³   ³   ³   autocomplete.css
+    ³   ³   ³   base.css
+    ³   ³   ³   changelists.css
+    ³   ³   ³   dark_mode.css
+    ³   ³   ³   dashboard.css
+    ³   ³   ³   fonts.css
+    ³   ³   ³   forms.css
+    ³   ³   ³   login.css
+    ³   ³   ³   nav_sidebar.css
+    ³   ³   ³   responsive.css
+    ³   ³   ³   responsive_rtl.css
+    ³   ³   ³   rtl.css
+    ³   ³   ³   widgets.css
+    ³   ³   ³   
+    ³   ³   ÀÄÄÄvendor
+    ³   ³       ÀÄÄÄselect2
+    ³   ³               LICENSE-SELECT2.md
+    ³   ³               select2.css
+    ³   ³               select2.min.css
+    ³   ³               
+    ³   ÃÄÄÄfonts
+    ³   ³       LICENSE.txt
+    ³   ³       README.txt
+    ³   ³       Roboto-Bold-webfont.woff
+    ³   ³       Roboto-Light-webfont.woff
+    ³   ³       Roboto-Regular-webfont.woff
+    ³   ³       
+    ³   ÃÄÄÄimg
+    ³   ³   ³   calendar-icons.svg
+    ³   ³   ³   icon-addlink.svg
+    ³   ³   ³   icon-alert.svg
+    ³   ³   ³   icon-calendar.svg
+    ³   ³   ³   icon-changelink.svg
+    ³   ³   ³   icon-clock.svg
+    ³   ³   ³   icon-deletelink.svg
+    ³   ³   ³   icon-no.svg
+    ³   ³   ³   icon-unknown-alt.svg
+    ³   ³   ³   icon-unknown.svg
+    ³   ³   ³   icon-viewlink.svg
+    ³   ³   ³   icon-yes.svg
+    ³   ³   ³   inline-delete.svg
+    ³   ³   ³   LICENSE
+    ³   ³   ³   README.txt
+    ³   ³   ³   search.svg
+    ³   ³   ³   selector-icons.svg
+    ³   ³   ³   sorting-icons.svg
+    ³   ³   ³   tooltag-add.svg
+    ³   ³   ³   tooltag-arrowright.svg
+    ³   ³   ³   
+    ³   ³   ÀÄÄÄgis
+    ³   ³           move_vertex_off.svg
+    ³   ³           move_vertex_on.svg
+    ³   ³           
+    ³   ÀÄÄÄjs
+    ³       ³   actions.js
+    ³       ³   autocomplete.js
+    ³       ³   calendar.js
+    ³       ³   cancel.js
+    ³       ³   change_form.js
+    ³       ³   collapse.js
+    ³       ³   core.js
+    ³       ³   filters.js
+    ³       ³   inlines.js
+    ³       ³   jquery.init.js
+    ³       ³   nav_sidebar.js
+    ³       ³   popup_response.js
+    ³       ³   prepopulate.js
+    ³       ³   prepopulate_init.js
+    ³       ³   SelectBox.js
+    ³       ³   SelectFilter2.js
+    ³       ³   urlify.js
+    ³       ³   
+    ³       ÃÄÄÄadmin
+    ³       ³       DateTimeShortcuts.js
+    ³       ³       RelatedObjectLookups.js
+    ³       ³       
+    ³       ÀÄÄÄvendor
+    ³           ÃÄÄÄjquery
+    ³           ³       jquery.js
+    ³           ³       jquery.min.js
+    ³           ³       LICENSE.txt
+    ³           ³       
+    ³           ÃÄÄÄselect2
+    ³           ³   ³   LICENSE.md
+    ³           ³   ³   select2.full.js
+    ³           ³   ³   select2.full.min.js
+    ³           ³   ³   
+    ³           ³   ÀÄÄÄi18n
+    ³           ³           af.js
+    ³           ³           ar.js
+    ³           ³           az.js
+    ³           ³           bg.js
+    ³           ³           bn.js
+    ³           ³           bs.js
+    ³           ³           ca.js
+    ³           ³           cs.js
+    ³           ³           da.js
+    ³           ³           de.js
+    ³           ³           dsb.js
+    ³           ³           el.js
+    ³           ³           en.js
+    ³           ³           es.js
+    ³           ³           et.js
+    ³           ³           eu.js
+    ³           ³           fa.js
+    ³           ³           fi.js
+    ³           ³           fr.js
+    ³           ³           gl.js
+    ³           ³           he.js
+    ³           ³           hi.js
+    ³           ³           hr.js
+    ³           ³           hsb.js
+    ³           ³           hu.js
+    ³           ³           hy.js
+    ³           ³           id.js
+    ³           ³           is.js
+    ³           ³           it.js
+    ³           ³           ja.js
+    ³           ³           ka.js
+    ³           ³           km.js
+    ³           ³           ko.js
+    ³           ³           lt.js
+    ³           ³           lv.js
+    ³           ³           mk.js
+    ³           ³           ms.js
+    ³           ³           nb.js
+    ³           ³           ne.js
+    ³           ³           nl.js
+    ³           ³           pl.js
+    ³           ³           ps.js
+    ³           ³           pt-BR.js
+    ³           ³           pt.js
+    ³           ³           ro.js
+    ³           ³           ru.js
+    ³           ³           sk.js
+    ³           ³           sl.js
+    ³           ³           sq.js
+    ³           ³           sr-Cyrl.js
+    ³           ³           sr.js
+    ³           ³           sv.js
+    ³           ³           th.js
+    ³           ³           tk.js
+    ³           ³           tr.js
+    ³           ³           uk.js
+    ³           ³           vi.js
+    ³           ³           zh-CN.js
+    ³           ³           zh-TW.js
+    ³           ³           
+    ³           ÀÄÄÄxregexp
+    ³                   LICENSE.txt
+    ³                   xregexp.js
+    ³                   xregexp.min.js
+    ³                   
+    ÀÄÄÄimg
+            Logo.png
+            microgreens-about.png
+            microgreens-hero.png
+            

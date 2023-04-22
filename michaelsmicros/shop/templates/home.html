@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+  body {
+    background-image: url("{% static 'img/background.png' %}");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .col-md-6 img {
+    width: 100%;
+    height: auto;
+  }
+</style>
+
+
+  <section class="hero">
+    <div class="hero-image" style="display: flex; justify-content: center; align-items: center;">
+        <a href="{% url 'shop' %}">
+            <img src="{% static 'img/Logo.png' %}" alt="microgreens" style="position: relative;">
+        </a>
+    </div>
+    <div class="hero-text">
+      <h1 style="text-align: center;">Discover the World of Microgreens</h1>
+      <p>Microgreens are young vegetable greens that are approximately 1–3 inches tall. They have an intense flavor and are packed with nutrients, making them a great addition to any diet. Despite their small size, microgreens are packed with essential vitamins, minerals, and antioxidants. In fact, studies have shown that they can contain up to 40 times more nutrients than their mature counterparts. This makes them a great addition to any diet, especially for those who are looking to boost their nutrient intake. Microgreens come in a variety of flavors, including sweet, spicy, and earthy. Some popular varieties include arugula, broccoli, kale, and radish. They can be used as a garnish or incorporated into a variety of dishes, including salads, sandwiches, and smoothies.</p>
+      <a href="{% url 'shop' %}" class="btn btn-primary" style="display: block; margin: 0 auto; text-align: center;">Shop Now</a>
+    </div>
+  </section>
+
+<div style="height: 200px;"></div>
+
+  <section class="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2 style="text-align: center;">About Us</h2>
+          <p>
+            At our microgreen business, we're dedicated to providing you with the highest quality organic and non-GMO microgreens that are grown with care and attention to detail. Our microgreens are grown in organic soil and watered with reverse osmosis water, ensuring their purity and quality.
+            We take pride in growing our microgreens indoors, which helps us to maintain a controlled environment, free from any external contaminants. We believe that growing our microgreens in a clean and pure environment is essential to producing the highest quality products possible.
+            Microgreens have been shown to offer a range of health benefits, and we're passionate about spreading the word about their incredible nutritional properties. One compound found in broccoli microgreens, sulforaphane, has been linked to numerous health benefits, including improved heart health, lower inflammation, and even reduced risk of cancer.
+            It was the discovery of sulforaphane that inspired us to start growing and using microgreens in our own daily diets. We were amazed by the potential health benefits and decided to start growing broccoli microgreens ourselves. Since then, we've been incorporating them into our smoothies, and have experienced increased energy and focus, as well as improved overall health.
+            At our microgreen business, we're committed to bringing you the best quality microgreens possible, grown with care and attention to detail. We hope that by sharing our passion for these incredible greens, we can help others experience the amazing health benefits they have to offer.</p>
+        </div>
+        <div class="col-md-6">
+          <img src="{% static 'img/microgreens-about.png' %}" alt="microgreens" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
