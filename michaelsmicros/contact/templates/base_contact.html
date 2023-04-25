@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,31 +38,6 @@
         header {
             border-bottom: 5px solid green;
         }
-
-    /* Footer style */
-         footer {
-            background-color: #f2f2f2;
-            padding: 20px 0;
-            text-align: center;
-            margin-top: 50px;
-          }
-
-          footer a {
-            color: #333;
-            text-decoration: none;
-            margin: 0 10px;
-          }
-
-          footer a:hover {
-            color: #777;
-            text-decoration: underline;
-          }
-
-          footer img {
-            width: 30px;
-            height: 30px;
-            margin: 0 10px;
-          }
     </style>
 
 </head>
@@ -71,8 +45,8 @@
     <header>
         <nav>
             <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="{% url 'shop' %}">Shop</a></li>
-                <li><a href="{% url 'contact' %}">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -81,18 +55,4 @@
         {% endblock %}
     </main>
 </body>
-
-<footer>
-  <a href="{% url 'home' %}">Home</a>
-  <a href="{% url 'contact' %}">Contact</a>
-  <a href="{% url 'shop' %}">Shop</a>
-  <a href="{% url 'cart' %}" target="_blank">
-     <img src="{% static 'img/cart.png' %}" alt="Cart">
-  </a>
-  <a href="https://www.instagram.com" target="_blank">
-    <img src="{% static 'img/instalogo.png' %}" alt="Instagram">
-  </a>
-  <p>Michael's Micros   |   407 Tickner Street Linden, Michigan - 48451</p>
-</footer>
-
 </html>

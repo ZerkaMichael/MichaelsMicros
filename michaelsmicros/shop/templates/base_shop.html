@@ -1,0 +1,98 @@
+{% load static %}
+<html>
+<head>
+    <title>Shop</title>
+    <style>
+        nav {
+            text-align: center;
+            padding-bottom: 0px;
+        }
+
+        nav ul {
+             display: flex;
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+        }
+
+        nav a:hover {
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            color: green;
+        }
+
+        nav a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 36px;
+            padding: 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+    /* Border Line */
+        header {
+            border-bottom: 5px solid green;
+        }
+
+        /* Style and center the Cart button */
+        .cart-container img {
+            vertical-align: middle;
+        }
+
+        .cart-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .cart-count {
+            background-color: red;
+            border-radius: 50%;
+            color: #fff;
+            display: inline-block;
+            font-size: 33px;
+            font-weight: bold;
+            height: 33px;
+            line-height: 33px;
+            margin-left: 6px;
+            text-align: center;
+            width: 33px;
+        }
+
+        /* Add container for the cart button and navigation tabs */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Wrap the cart button and navigation tabs inside a common container -->
+        <div class="header-container">
+            <nav>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="cart-container">
+                <a href="{% url 'cart' %}">
+                    <img src="{% static 'img/cart.png' %}" alt="Cart" width="45" height="45">
+                    <span class="cart-count">{{ cart_items_count }}</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
