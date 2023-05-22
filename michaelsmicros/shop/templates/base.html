@@ -1,71 +1,63 @@
-{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Shop</title>
+    <title>{% block title %}Home{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <style>
-    /* Navigation  bar style */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f6f7;
+            margin: 0;
+        }
+
         nav {
-            text-align: center;
-            padding-bottom: 20px;
+            background-color: #588c7e;
+            padding: 10px 0;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: opacity 0.3s ease-in-out;
         }
 
         nav ul {
-            display: inline-block;
+            display: flex;
             list-style-type: none;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
         }
 
         nav li {
-            display: inline-block;
-        }
-
-        nav a:hover {
-            background-color: white;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-            color: green;
+            margin-right: 30px;
         }
 
         nav a {
-            color: #000;
+            color: #fff;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 36px;
-            padding: 20px;
-            border-radius: 5px;
+            font-weight: 300;
+            font-size: 24px;
+            padding: 10px;
+            border-radius: 3px;
             transition: background-color 0.3s ease-in-out;
         }
 
-    /* Border Line */
-        header {
-            border-bottom: 5px solid green;
+        nav a:hover {
+            background-color: #3b5065;
         }
 
-    /* Footer style */
-         footer {
-            background-color: #f2f2f2;
-            padding: 20px 0;
-            text-align: center;
-            margin-top: 50px;
-          }
+        header {
+            border-bottom: 5px solid #588c7e;
+        }
 
-          footer a {
-            color: #333;
-            text-decoration: none;
-            margin: 0 10px;
-          }
 
-          footer a:hover {
-            color: #777;
-            text-decoration: underline;
-          }
-
-          footer img {
-            width: 30px;
-            height: 30px;
-            margin: 0 10px;
-          }
+        main {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
     </style>
-
 </head>
 <body>
     <header>
@@ -81,18 +73,4 @@
         {% endblock %}
     </main>
 </body>
-
-<footer>
-  <a href="{% url 'home' %}">Home</a>
-  <a href="{% url 'contact' %}">Contact</a>
-  <a href="{% url 'shop' %}">Shop</a>
-  <a href="{% url 'cart' %}" target="_blank">
-     <img src="{% static 'img/cart.png' %}" alt="Cart">
-  </a>
-  <a href="https://www.instagram.com" target="_blank">
-    <img src="{% static 'img/instalogo.png' %}" alt="Instagram">
-  </a>
-  <p>Michael's Micros   |   407 Tickner Street Linden, Michigan - 48451</p>
-</footer>
-
 </html>

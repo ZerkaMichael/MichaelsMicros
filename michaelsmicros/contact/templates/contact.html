@@ -2,133 +2,158 @@
 {% load static %}
 {% block content %}
 <style>
-/* Background */
+  /* General Styles */
   body {
-    background-color: #f5f5f5;
+    background-color: #E8F5E9;
+    font-family: 'Roboto', sans-serif;
   }
 
-  h2 {
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 40px;
-    background-color: #f5f5f5;
-  }
-
-/* Contact Box */
+  /* Contact Form */
   .contact-form {
-    background-color: #F2F2F2;
-    padding: 50px;
+    background-color: #A5D6A7;
+    padding: 30px 50px;
     border-radius: 10px;
     max-width: 600px;
-    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.9);
-    margin: 0 auto;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    transition: box-shadow 0.3s ease-in-out;
   }
 
+  .contact-form:hover {
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Form Labels and Inputs */
   .form-label {
-    font-weight: bold;
-    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2E7D32;
   }
 
   input,
   textarea {
-    border-radius: 5px;
-    border: none;
-    box-shadow: none;
-    background-color: #E6E6E6;
-    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.3);
+    border: 1px solid #2E7D32;
+    background-color: #E8F5E9;
     padding: 10px;
     font-size: 1rem;
+    transition: background-color 0.3s ease-in-out;
   }
 
   input:focus,
   textarea:focus {
-    outline: none;
-    box-shadow: none;
-    background-color: #D9D9D9;
+    background-color: #C8E6C9;
   }
 
-/* Submit Button */
+  /* FAQ Styles */
+  .faq-box {
+    background-color: #A5D6A7;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  .faq-box:hover {
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Submit Button */
   .btn-primary {
-    background-color: #4B4E6D;
-    border-color: #4B4E6D;
+    background-color: #2E7D32;
+    border-color: #2E7D32;
     color: #FFFFFF;
-    font-size: 1.2rem;
     padding: 10px 30px;
     border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
   }
 
   .btn-primary:hover {
-    background-color: #606379;
-    border-color: #606379;
+    background-color: #1B5E20;
   }
 
-/* FAQ styles */
-  .faq-box {
-    background-color: #F2F2F2;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.9);
+  /* Headers */
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
     text-align: center;
-    margin-top: 20px;
+    color: #2E7D32;
+    margin-bottom: 30px;
   }
 
-  .faq-list {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0;
-  }
-
-  .faq-list li {
-    margin-bottom: 10px;
-    color: #4B4E6D;
-    font-size: 1rem;
-  }
-
+  /* FAQ Bullet Points */
   .faq-bullet {
     display: inline-block;
     width: 10px;
     height: 10px;
-    background-color: #007bff;
+    background-color: #2E7D32;
     border-radius: 50%;
     margin-right: 10px;
   }
 </style>
 
-
+<!-- Contact Form -->
 <div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <div class="contact-header">
-        <h2 class="text-center mb-5">Contact Us</h2>
-        <div class="square"></div>
+  <h2>Contact Us</h2>
+  <div class="contact-form">
+    <form onsubmit="sendMessage(event)">
+      <div class="form-group">
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" class="form-control" id="name" required>
       </div>
-      <form class="contact-form" onsubmit="sendMessage(event)">
-        <div class="form-group">
-          <label for="name" class="form-label">Name:</label>
-          <input type="text" class="form-control" id="name" required>
-        </div>
-        <div class="form-group">
-          <label for="email" class="form-label">Email or Phone Number:</label>
-          <input type="text" class="form-control" id="email" required>
-        </div>
-        <div class="form-group">
-          <label for="message" class="form-label">Message:</label>
-          <textarea class="form-control" id="message" rows="5" required></textarea>
-        </div>
-        <button id="submit-btn" type="submit" class="btn btn-primary btn-lg d-block mx-auto mt-4">Submit</button>
-      </form>
-    </div>
-    <div class="col-md-4">
-      <div class="faq-box">
-        <h2 class="text-center mb-4">FAQ</h2>
-        <ul class="faq-list">
-          <li><span class="faq-bullet"></span>An Email or Phone number is needed if you want to be contacted with a response.</li>
-          <li><span class="faq-bullet"></span>Tray orders are standard 10x20 trays planted asap after your order is placed. Different microgreens have specific grow periods. You will be contacted 24 hours prior to your order being ready and it is ideal to pickup within 72 hours of then so they can be harvested fresh. It is impossible to guarantee an exact quantity, but we do <strong>guarantee</strong> price per weight will be significantly lower and we <strong>guarantee</strong> a quality product with <strong>at least</strong> a reasonable quantity.</li>
-        </ul>
+      <div class="form-group">
+        <label for="email" class="form-label">Email or Phone Number:</label>
+        <input type="text" class="form-control" id="email" required>
       </div>
-    </div>
+      <div class="form-group">
+        <label for="message" class="form-label">Message:</label>
+        <textarea class="form-control" id="message" rows="5" required></textarea>
+      </div>
+      <button id="submit-btn" type="submit" class="btn btn-primary btn-lg d-block mx-auto mt-4">Submit</button>
+    </form>
   </div>
+
+  <!-- FAQ -->
+<h2>Frequently Asked Questions (FAQ)</h2>
+<div class="faq-box">
+  <ul class="faq-list">
+    <li>
+      <span class="faq-bullet"></span><strong>Why is an Email or Phone number required for contact?</strong><br>
+      We require your Email or Phone number in order to provide you with a prompt response and keep you informed about your inquiries, orders, and any updates related to our products and services. Rest assured that we prioritize the privacy and security of your contact information.
+    </li>
+    <li>
+      <span class="faq-bullet"></span><strong>What varieties of microgreens do you offer?</strong><br>
+      Our repertoire of microgreens includes popular varieties such as arugula, broccoli, kale, and radish. Each variety brings a unique flavor profile and nutritional benefits, offering a diverse palette for your culinary experiments. For more information about our microgreen offerings, please visit our product page or get in touch with us.
+    </li>
+    <li>
+      <span class="faq-bullet"></span><strong>What can I expect with tray orders?</strong><br>
+      Our tray orders consist of standard 10x20 trays that are planted as soon as your order is placed. Each type of microgreen has its specific grow periods, which may vary. We ensure that your trays are carefully handled and maintained during the growing process to deliver fresh and high-quality microgreens to you.
+    </li>
+    <li>
+      <span class="faq-bullet"></span><strong>Do you offer shipping services?</strong><br>
+      We value the quality of our microgreens immensely and to ensure that our customers receive the freshest possible product, we currently do not offer shipping services. Shipping often compromises the quality and freshness of our greens, and we strive to deliver only the best. We, however, offer local delivery services. Please feel free to contact us for further information.
+    </li>
+    <li>
+      <span class="faq-bullet"></span><strong>Can I customize my order or request specific microgreen varieties?</strong><br>
+      We understand the importance of catering to individual preferences. While we offer a diverse range of microgreen varieties, customization options may be available upon request. Please contact our customer support team to discuss your specific requirements, and we will do our best to accommodate your needs.
+    </li>
+    <li>
+      <span class="faq-bullet"></span><strong>Are your microgreens organic?</strong><br>
+      We take immense pride in offering microgreens that are grown from organic seeds in organic soil with reverse osmosis water. While the microgreens themselves are not certified organic, we adhere to the principles of organic farming. Our controlled growing environments further ensure the nutritional value of our products and minimize the usage of synthetic substances.
+    </li>
+    <li>
+      <span class="faq-bullet"></span><strong>How should I store the microgreens?</strong><br>
+      Our microgreens are best savored when fresh, hence we recommend storing them in a cool, refrigerated environment for maintaining their peak flavor and nutritional value. If you're seeking to extend their life, freezing is an option for certain varieties such as broccoli microgreens. Interestingly, research <a href="https://pubs.rsc.org/en/content/articlelanding/2015/ra/c5ra03403e">suggests</a> that freezing broccoli microgreens can increase the yield of sulforaphane, a potent compound associated with numerous health benefits. This unique property makes broccoli microgreens a versatile and nutritious addition to your meals.
+    </li>
+    <li>
+      <span class="faq-bullet"></span><strong>How do I place an order?</strong><br>
+      Placing an order is simple and straightforward. Visit our product page, select the microgreens you desire, specify the quantity, and proceed to checkout. If you require any assistance or have special requests, don't hesitate to contact us. We're here to help you embark on your microgreen journey.
+    </li>
+
+  </ul>
+</div>
+
+
+  <!-- Message Alerts -->
   <div id="success-message" class="mt-5" style="display: none;">
     <div class="alert alert-success text-center" role="alert">
       Your message was sent successfully. We will get back to you soon.

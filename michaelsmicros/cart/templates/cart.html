@@ -1,70 +1,92 @@
-{% include 'cartbase.html' %}
+{% extends 'cartbase.html' %}
 {% load static %}
 {% block content %}
 {% load custom_filters %}
 
 <style>
   body {
-    background-color: #f5f5f5;
+    background-color: #f4f6f7;
+    font-family: 'Roboto', sans-serif;
   }
 
-/* Add some padding and a background color to the header */
   h1 {
-    padding: 10px;
-    background-color: #3f51b5;
-    color: white;
-  }
-
-/* Add some padding and a border to the container */
-  .container {
     padding: 20px;
-    border: 1px solid #3f51b5;
+    background-color: #6b8f58; /* Earthy green shade */
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
 
-/* Add some styling to the table */
+  .container {
+    max-width: 960px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
   table {
     width: 100%;
     border-collapse: collapse;
+    text-align: left;
+    margin-top: 20px;
   }
 
   th, td {
-    padding: 10px;
-    border: 1px solid #3f51b5;
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
   }
 
   th {
-    background-color: #3f51b5;
-    color: white;
+    color: #6b8f58; /* Earthy green shade */
+    font-weight: 400;
   }
 
-/* Add some styling to the "Submit Order" button */
+  tr:hover {background-color: #f5f5f5;}
+
   button[name="submit-order"] {
-    margin-top: 0px;
+    display: block;
+    width: 100%;
     padding: 10px;
-    background-color: #3f51b5;
+    margin-top: 20px;
+    background-color: #6b8f58; /* Earthy green shade */
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
   }
 
   button[name="submit-order"]:hover {
-    background-color: #2c3e50;
+    background-color: #536f43; /* Adjusted color */
   }
 
   .cart-item-remove {
-    margin-right: 10px;
     color: red;
     cursor: pointer;
   }
-</style>
 
-<!-- Add a header with the page title -->
-<h1 style="text-align: center;">Your Cart</h1>
+  label, input {
+    display: block;
+    margin-top: 20px;
+  }
 
-<!-- Add a container for the cart items -->
+  input {
+    padding: 10px;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+  }
+
+</style>44
+
+<h1>Your Cart</h1>
+
 <div class="container">
-  <!-- Use a table to display the cart item information -->
   <form action="{% url 'submit_order' %}" method="post">
     {% csrf_token %}
     <table>
@@ -77,14 +99,13 @@
         </tr>
       </thead>
       <tbody>
-        <!-- Loop through the cart items and display their information in table rows -->
         {% for item in cart_items %}
           {% with quantity_float=item.quantity|to_float price_float=item.product.price|to_float %}
           {% with subtotal=quantity_float|mul:price_float %}
           <tr>
             <td>{{ item.product.plant_type }}</td>
             <td>${{ item.product.price }}</td>
-            <td style="position: relative;">{{ item.quantity }} oz<span class="cart-item-remove" style="position: absolute; right: 0;"><span class="remove-item" data-itemid="{{ item.id }}">Remove</span></span></td>
+            <td>{{ item.quantity }} oz<span class="cart-item-remove"><span class="remove-item" data-itemid="{{ item.id }}">Remove</span></span></td>
             <td>${{ subtotal|floatformat:2 }}</td>
           </tr>
           {% endwith %}
@@ -99,14 +120,10 @@
       </tfoot>
     </table>
 
-    <!-- Add a form to collect customer information -->
     <label for="name">Name:</label>
     <input type="text" name="name" required>
-    <br>
     <label for="contact">Contact:</label>
     <input type="text" name="contact" required>
-    <br>
-    <!-- Add a "Submit Order" button -->
     <button type="submit" name="submit-order" id="submit-order-btn">Submit Order</button>
   </form>
 </div>
